@@ -1,11 +1,35 @@
 @import "tailwindcss";
 
+@keyframes slide {
+  0% {
+    transform: translateX(0%) translateY(0px);
+  }
+  25% {
+    transform: translateX(-12.5%) translateY(-20px);
+  }
+  50% {
+    transform: translateX(-25%) translateY(0px);
+  }
+  75% {
+    transform: translateX(-37.5%) translateY(20px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+
+.animate-slide {
+  display: flex;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+
 .dancing {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
 }
 .gotu {
   font-family: "Gotu", cursive;
- font-weight: 800;
+  font-weight: 800;
   font-style: normal;
 }
 .poppins {
