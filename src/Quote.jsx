@@ -1,11 +1,22 @@
 import { TypeAnimation } from "react-type-animation";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { GiNestedHearts } from "react-icons/gi";
 import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Quote = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollY !== undefined) {
+      window.scrollTo({
+        top: location.state.scrollY,
+        behavior: "instant", // or "auto"
+      });
+    }
+  }, [location]);
+
   return (
     <div className="h-full bg-[url(/bggg.png)] bg-repeat-y bg-auto bg-top relative pb-6">
       <img src="flags.png" />
@@ -135,9 +146,13 @@ const Quote = () => {
         </div>
       </motion.div>
       <div className="my-[150px] flex justify-center flex-col items-center gap-3  pb-11">
-        <div className="poppins font-light text-xl">
-          There's something for you asdasdasd
-        </div>
+        <Link
+          to="/khat"
+          state={{ scrollY: window.scrollY }}
+          className="border text-xl bg-red-500 text-white p-2 rounded-xl px-3 flex items-center gap-1"
+        >
+          Click Here <GiNestedHearts />
+        </Link>
       </div>
     </div>
   );

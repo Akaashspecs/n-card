@@ -49,3 +49,15 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.fjalla {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.arvo {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: italic;
+}
