@@ -10,7 +10,10 @@ function App() {
 
   return (
     <>
-      <Routes></Routes>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="*" element={<Khat />} />
+      </Routes>
     </>
   );
 }
