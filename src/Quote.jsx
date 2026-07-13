@@ -145,15 +145,14 @@ const Quote = () => {
           <div>.</div> <br /> <div>.</div>
         </div>
       </motion.div>
-      <div className="my-[150px] flex justify-center flex-col items-center gap-3  pb-11">
-        <Link
-          to="/khat"
-          state={{ scrollY: window.scrollY }}
-          className="border text-xl bg-red-500 text-white p-2 rounded-xl px-3 flex items-center gap-1"
-        >
-          Click Here <GiNestedHearts />
-        </Link>
-      </div>
+
+      <Link
+        to="/khat"
+        state={{ scrollY: window.scrollY }}
+        className="border text-xl bg-red-500 max-w-[150px] mx-auto my-6 mb-4 text-white p-2 rounded-xl px-3 flex items-center gap-1"
+      >
+        Click Here <GiNestedHearts />
+      </Link>
     </div>
   );
 };
